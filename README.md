@@ -6,7 +6,7 @@ The portfolio is built with a focus on **performance, accessibility, responsive 
 
 ## 🚀 Live Website
 
-**[View Portfolio](https://zeesh-development-phi.vercel.app).**
+**[View Portfolio](https://zeesh-development-phi.vercel.app)**
 
 ## 🛠️ Tech Stack
 

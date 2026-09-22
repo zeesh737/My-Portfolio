@@ -6,7 +6,7 @@ The portfolio is built with a focus on **performance, accessibility, responsive 
 
 ## 🚀 Live Website
 
-**[[View Portfolio]]([url](https://zeesh-development-phi.vercel.app/))**
+**View Portfolio [Visit](https://zeesh-development-phi.vercel.app).**
 
 ## 🛠️ Tech Stack
 
@@ -55,4 +55,4 @@ This project is intended for personal portfolio purposes.
 
 ---
 
-**Built and maintained by [Your Name](https://github.com/zeesh737).**
+**Built and maintained by [Zeeshan Khan](https://github.com/zeesh737).**

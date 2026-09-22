@@ -12,15 +12,6 @@ powered by **Nodemailer** — same behavior, no PHP required.
 - `public/js/app.js` was updated in one place: the contact form now `fetch()`s `/api/contact` (JSON) instead of `contact.php` (FormData). No other frontend behavior changed.
 - Added a basic rate limiter (5 submissions / 15 min per IP) on the contact endpoint.
 
-## ⚠️ Security note on the original file
-
-The `contact.php` you uploaded had a **real-looking Gmail app password hardcoded
-in plain text** (`SMTP_PASS`). That value was **not** carried into this project —
-`.env.example` only has placeholders. If that password is real, treat it as
-compromised: revoke it at https://myaccount.google.com/apppasswords and
-generate a new one for this project. Never commit real credentials to a repo —
-`.env` is gitignored here for that reason.
-
 ## Project structure
 
 ```
@@ -59,22 +50,6 @@ npm install
 cp .env.example .env   # then fill in real values
 npm run dev             # http://localhost:3000
 ```
-
-### `.env` values
-
-| Variable | Meaning |
-|---|---|
-| `PORT` | Local server port |
-| `RECIPIENT_EMAIL` | Where contact-form messages get delivered |
-| `SENDER_NAME` | Display name on the outgoing email |
-| `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` | Your mail provider's SMTP settings |
-| `SMTP_USER` / `SMTP_PASS` | The mailbox sending the email (for Gmail, use an **App Password**, not your normal password) |
-
-## Adding your images
-
-Drop files into `public/img/projects/` and `public/img/clients/`, then reference
-them from the HTML/JS where the template currently points at `placehold.co`
-placeholder images.
 
 ## Notes
 

@@ -2580,3 +2580,12 @@ body.rtl .pd-list li:before {
     padding: 9px 14px;
   }
 }
+
+.quick-view-cta {
+  background-color: red !important;
+  color: #fff !important;
+}
+
+.quick-view-cta .fa-id-card{
+  color: #fff !important;
+}

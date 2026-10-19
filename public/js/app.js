@@ -570,7 +570,7 @@ const typeWriterEffect = (element, text) => {
   return new Promise(resolve => {
     let scrollInterval;
     const typewriter = new Typewriter(element, {
-      delay: 15,
+      delay: 7,
       loop: false,
       cursor: ' ',
       autoStart: true,

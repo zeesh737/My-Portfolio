@@ -595,7 +595,7 @@ const typeWriterEffect = (element, text) => {
         if (scrollInterval) clearInterval(scrollInterval);
         const cursor = element.querySelector('.Typewriter__cursor');
         if (cursor) cursor.style.display = 'none';
-        element.innerHTML = htmlText;
+        // element.innerHTML = htmlText;
         typewriter.stop();
         scrollToBottom();
         resolve();

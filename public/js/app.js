@@ -122,11 +122,18 @@ CONTACT SECTION FLOW
 const initializeContactFlow = () => {
   const contactEl = document.getElementById('flow-contact');
   if (!contactEl) return;
-  const directItems = Array.from(contactEl.querySelectorAll('.direct-contact .contact-row')).map(div => ({
-    label: div.getAttribute('data-label'),
-    icon: div.getAttribute('data-icon'),
-    value: div.innerText.trim()
-  }));
+  const directItems = Array.from(contactEl.querySelectorAll('.direct-contact .contact-row')).map(div => {
+    const text = div.innerText.trim();
+    const href = div.getAttribute('data-href');
+    const external = href && href.startsWith('http');
+    return {
+      label: div.getAttribute('data-label'),
+      icon: div.getAttribute('data-icon'),
+      value: href
+        ? `<a href="${href}"${external ? ' target="_blank" rel="noopener"' : ''}>${text}</a>`
+        : text
+    };
+  });
   const socialItems = Array.from(contactEl.querySelectorAll('.social-links .social-item')).map(div => ({
     icon: div.getAttribute('data-icon'),
     url: div.getAttribute('data-url'),

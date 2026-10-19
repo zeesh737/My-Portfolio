@@ -1881,6 +1881,10 @@ body.rtl .pd-list li:before {
   .modal-overlay.modal-details .modal-content-area {
     border-radius: 20px;
   }
+  .intro-screen .rounded-animation {
+    height:70%;
+    width: 70%;
+  }
 }
 
 /*** CLIENTS ***/
@@ -2185,6 +2189,10 @@ body.rtl .pd-list li:before {
   .intro-screen .intro-options .btn-primary:not(.btn-secondary) {
     margin-right: 0;
   }
+
+  .intro-screen .image-container {
+    height: auto;
+  }
 }
 
 @media (max-width: 767px) {
@@ -2307,7 +2315,7 @@ body.rtl .pd-list li:before {
   .contextual-options,
   .intro-screen .intro-options {
     gap: 15px;
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .contextual-options {
@@ -2581,11 +2589,86 @@ body.rtl .pd-list li:before {
   }
 }
 
-.quick-view-cta {
-  background-color: red !important;
-  color: #fff !important;
+/*** FOOTER: hint text + CV actions ***/
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 20px;
+  padding-top: 12px;
 }
 
-.quick-view-cta .fa-id-card{
-  color: #fff !important;
+.footer-bottom p {
+  padding-top: 0;
+}
+
+.cv-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.cv-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border: 1px solid #e11d2a;
+  border-radius: 30px;
+  font-family: 'Geist', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: .01rem;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+.cv-pill i {
+  font-size: 0.72rem;
+}
+
+.cv-pill-solid {
+  background-color: #e11d2a;
+  color: #fff;
+}
+
+.cv-pill-solid:hover {
+  background-color: #c4141f;
+  border-color: #c4141f;
+}
+
+.cv-pill-outline {
+  background-color: transparent;
+  color: #e11d2a;
+}
+
+.cv-pill-outline:hover {
+  background-color: #e11d2a;
+  color: #fff;
+}
+
+.cv-passport-photo {
+  width: 100%; 
+  height: 175px; 
+  object-fit: cover; 
+  border-radius: 6px; 
+  display: block;
+}
+
+@media (max-width: 767px) {
+  /* keep the mobile footer compact: show only the buttons */
+  .footer-bottom p {
+    display: none;
+  }
+  .footer-bottom {
+    padding-top: 10px;
+  }
+  .cv-passport-photo {
+    height: 115px; 
+  }
 }

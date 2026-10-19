@@ -1141,6 +1141,17 @@ document.addEventListener('DOMContentLoaded', () => {
   NavigationMenu();
   setupIntroScreen();
 
+  // CV Quick View button (footer, next to the hint text)
+  const quickViewBtn = document.getElementById('quick-view-btn');
+  if (quickViewBtn) quickViewBtn.addEventListener('click', () => window.openCVQuickView());
+
+  // Download CV button: take the link from <meta name="cv-url">
+  const downloadCvBtn = document.getElementById('download-cv-btn');
+  const cvMeta = document.querySelector('meta[name="cv-url"]');
+  if (downloadCvBtn && cvMeta) {
+    downloadCvBtn.href = cvMeta.getAttribute('content');
+  }
+
   // Event Listeners for User Input and the Send Button
   chatInput.addEventListener('input', toggleSendButtonState);
   sendButton.addEventListener('click', () => {
